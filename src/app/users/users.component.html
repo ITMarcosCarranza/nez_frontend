@@ -1,0 +1,31 @@
+<a class="btn btn-primary"  routerLinkActive="active" routerLink="/add-user"> go to add user</a>
+
+
+<div class="container">
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidp</th>
+                <th>Direccion</th>
+                <th>Ciudad</th>
+                <th>Estado</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let x of users">
+                <td>{{x["nombre"] }}</td>
+                <td> {{x["apellido"] }}</td>
+                <td>{{x["direccion"]}}</td>
+                <td>{{x["ciudad"]}}</td>
+                <td>{{x["estado"]}}</td>
+                <td>{{x["telefono"]}}</td>
+                <td><a [routerLink]="['/user', x['nombre']]"> Edit</a></td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
