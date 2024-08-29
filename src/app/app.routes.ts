@@ -5,6 +5,7 @@ import { UserComponent } from './user/user.component';
 
 
 export const routes: Routes = [
+    {path:'',pathMatch:'full',redirectTo:'users'},
     {path:'users',component:UsersComponent},
     {path:'add-user',component: AddUserComponent},
     {path:'user/:id',component:UserComponent}

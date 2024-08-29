@@ -15,6 +15,7 @@ export class UsersComponent implements OnInit {
   url='http://localhost:5270/User';
   user:any
   users=[]
+  currentUser="";
 
   ngOnInit(): void {
     this.http.get(this.url,{
